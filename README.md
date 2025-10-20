@@ -111,6 +111,8 @@ http://localhost:8081
 
 A tela de login personalizada permite que usuários registrados acessem o sistema.
 
+<img width="1913" height="957" alt="image" src="https://github.com/user-attachments/assets/a605b2b4-0d00-43f7-aaee-fe7f1b5eff8c" />
+
 **Funcionalidades:**
 - Login com username e senha
 - Validação de credenciais
@@ -120,6 +122,8 @@ A tela de login personalizada permite que usuários registrados acessem o sistem
 ### 2. Tela de Cadastro (Sign Up)
 
 Permite que novos usuários se registrem no sistema.
+
+<img width="1920" height="961" alt="image" src="https://github.com/user-attachments/assets/2d999342-0824-4487-b9b5-d0c2e157a8ec" />
 
 **Funcionalidades:**
 - Formulário de cadastro completo
@@ -131,6 +135,8 @@ Permite que novos usuários se registrem no sistema.
 
 Exibe todos os brinquedos cadastrados no sistema.
 
+<img width="1916" height="570" alt="image" src="https://github.com/user-attachments/assets/eb26cfcb-daeb-4ed2-bf47-f294ff6934f3" />
+
 **Funcionalidades:**
 - Visualização em tabela responsiva
 - Informações organizadas (Nome, Tipo, Classificação, Tamanho, Preço)
@@ -140,6 +146,10 @@ Exibe todos os brinquedos cadastrados no sistema.
 ### 4. Formulário de Cadastro/Edição
 
 Formulário unificado para criar e editar brinquedos.
+
+<img width="1920" height="699" alt="image" src="https://github.com/user-attachments/assets/433eaf19-3372-4019-a69e-4f000d0783e1" />
+
+<img width="1920" height="697" alt="image" src="https://github.com/user-attachments/assets/4c3004a6-eaf0-41bb-8ed2-438a0fb13bfd" />
 
 **Funcionalidades:**
 - Campos organizados e validados
