@@ -13,6 +13,7 @@ Este é um sistema web desenvolvido em **Spring Boot** para gerenciar brinquedos
 - **Oracle Database** (Banco de dados)
 - **Lombok** (Redução de código boilerplate)
 - **Maven** (Gerenciamento de dependências)
+- **IDE: IntelliJ**
 
 ## 📋 Funcionalidades
 
