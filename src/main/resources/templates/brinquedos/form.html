@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${brinquedo.id != null ? 'Editar Brinquedo' : 'Novo Brinquedo'} + ' - Brinquedos Esportivos'">Novo Brinquedo - Brinquedos Esportivos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="/brinquedos">
+                <i class="bi bi-shop"></i> Brinquedos Esportivos
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/brinquedos">
+                            <i class="bi bi-list-ul"></i> Listar Brinquedos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/brinquedos/novo">
+                            <i class="bi bi-plus-circle"></i> Novo Brinquedo
+                        </a>
+                    </li>
+                </ul>
+                
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <span class="navbar-text me-3">
+                            Olá, <span sec:authentication="name"></span>!
+                        </span>
+                    </li>
+                    <li class="nav-item">
+                        <form method="post" action="/logout" class="d-inline">
+                            <button type="submit" class="btn btn-outline-light btn-sm">
+                                <i class="bi bi-box-arrow-right"></i> Sair
+                            </button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mt-4">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card-custom fade-in-up">
+                    <div class="card-header-custom">
+                        <h3 class="mb-0">
+                            <i th:class="${brinquedo.id != null ? 'bi bi-pencil icon-lg' : 'bi bi-plus-circle icon-lg'}"></i>
+                            <span th:text="${brinquedo.id != null ? 'Editar Brinquedo' : 'Novo Brinquedo'}"></span>
+                        </h3>
+                    </div>
+                    <div class="card-body p-4">
+                        <!-- Formulário -->
+                        <form th:action="${brinquedo.id != null ? '/brinquedos/atualizar/' + brinquedo.id : '/brinquedos'}" 
+                              th:object="${brinquedo}" 
+                              method="post">
+                            
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="nome" class="form-label form-label-custom">
+                                        <i class="bi bi-tag"></i> Nome do Brinquedo
+                                    </label>
+                                    <input type="text" class="form-control form-control-custom" 
+                                           th:field="*{nome}" 
+                                           th:classappend="${#fields.hasErrors('nome')} ? 'is-invalid' : ''"
+                                           placeholder="Ex: Bola de Futebol" required>
+                                    <div th:if="${#fields.hasErrors('nome')}" class="invalid-feedback">
+                                        <span th:errors="*{nome}"></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6 mb-3">
+                                    <label for="tipo" class="form-label form-label-custom">
+                                        <i class="bi bi-grid"></i> Tipo
+                                    </label>
+                                    <select class="form-select form-control-custom" 
+                                            th:field="*{tipo}"
+                                            th:classappend="${#fields.hasErrors('tipo')} ? 'is-invalid' : ''"
+                                            required>
+                                        <option value="">Selecione o tipo</option>
+                                        <option value="Bola">Bola</option>
+                                        <option value="Calçado">Calçado</option>
+                                        <option value="Roupa">Roupa</option>
+                                        <option value="Raquete">Raquete</option>
+                                        <option value="Acessório">Acessório</option>
+                                        <option value="Equipamento">Equipamento</option>
+                                    </select>
+                                    <div th:if="${#fields.hasErrors('tipo')}" class="invalid-feedback">
+                                        <span th:errors="*{tipo}"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="classificacao" class="form-label form-label-custom">
+                                        <i class="bi bi-star"></i> Classificação
+                                    </label>
+                                    <select class="form-select form-control-custom" 
+                                            th:field="*{classificacao}"
+                                            th:classappend="${#fields.hasErrors('classificacao')} ? 'is-invalid' : ''"
+                                            required>
+                                        <option value="">Selecione a classificação</option>
+                                        <option value="0-3 anos">0-3 anos</option>
+                                        <option value="4-6 anos">4-6 anos</option>
+                                        <option value="7-9 anos">7-9 anos</option>
+                                        <option value="10-12 anos">10-12 anos</option>
+                                        <option value="Todas as idades">Todas as idades</option>
+                                    </select>
+                                    <div th:if="${#fields.hasErrors('classificacao')}" class="invalid-feedback">
+                                        <span th:errors="*{classificacao}"></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6 mb-3">
+                                    <label for="tamanho" class="form-label form-label-custom">
+                                        <i class="bi bi-rulers"></i> Tamanho
+                                    </label>
+                                    <select class="form-select form-control-custom" 
+                                            th:field="*{tamanho}"
+                                            th:classappend="${#fields.hasErrors('tamanho')} ? 'is-invalid' : ''"
+                                            required>
+                                        <option value="">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">GG</option>
+                                        <option value="Único">Único</option>
+                                    </select>
+                                    <div th:if="${#fields.hasErrors('tamanho')}" class="invalid-feedback">
+                                        <span th:errors="*{tamanho}"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="preco" class="form-label form-label-custom">
+                                    <i class="bi bi-currency-dollar"></i> Preço (R$)
+                                </label>
+                                <input type="number" class="form-control form-control-custom" 
+                                       th:field="*{preco}" 
+                                       th:classappend="${#fields.hasErrors('preco')} ? 'is-invalid' : ''"
+                                       step="0.01" min="0" placeholder="0.00" required>
+                                <div th:if="${#fields.hasErrors('preco')}" class="invalid-feedback">
+                                    <span th:errors="*{preco}"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between">
+                                <a href="/brinquedos" class="btn btn-custom-secondary">
+                                    <i class="bi bi-arrow-left"></i> Voltar
+                                </a>
+                                <button type="submit" class="btn btn-custom-primary">
+                                    <i class="bi bi-check-circle"></i> 
+                                    <span th:text="${brinquedo.id != null ? 'Atualizar' : 'Salvar'}"></span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-custom">
+        <div class="container text-center">
+            <small>© Tranquilo CP5 - Parte 2</small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

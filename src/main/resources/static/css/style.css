@@ -1,0 +1,422 @@
+/* ========================================
+   SISTEMA BRINQUEDOS ESPORTIVOS - CSS
+   Tema: Preto e Branco Elegante
+   ======================================== */
+
+/* Reset e Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+    line-height: 1.6;
+}
+
+/* Navbar Customizada */
+.navbar-custom {
+    background: linear-gradient(135deg, #000000 0%, #333333 100%);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    border-bottom: 3px solid #ffffff;
+}
+
+.navbar-custom .navbar-brand {
+    color: #ffffff !important;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.navbar-custom .navbar-brand:hover {
+    color: #e0e0e0 !important;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.navbar-custom .nav-link {
+    color: #e0e0e0 !important;
+    font-weight: 500;
+    margin: 0 10px;
+    border-radius: 5px;
+    padding: 8px 15px !important;
+    transition: all 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active {
+    color: #000000 !important;
+    background-color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.navbar-custom .navbar-text {
+    color: #ffffff !important;
+    font-weight: 500;
+}
+
+/* Botões Customizados */
+.btn-custom-primary {
+    background: linear-gradient(45deg, #000000, #333333);
+    border: 2px solid #000000;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 10px 25px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-custom-primary:hover {
+    background: linear-gradient(45deg, #333333, #000000);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+}
+
+.btn-custom-secondary {
+    background: #ffffff;
+    border: 2px solid #000000;
+    color: #000000;
+    font-weight: 600;
+    padding: 10px 25px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-custom-secondary:hover {
+    background: #000000;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.btn-custom-danger {
+    background: #ffffff;
+    border: 2px solid #dc3545;
+    color: #dc3545;
+    font-weight: 600;
+    padding: 8px 20px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.btn-custom-danger:hover {
+    background: #dc3545;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.btn-custom-warning {
+    background: #ffffff;
+    border: 2px solid #ffc107;
+    color: #856404;
+    font-weight: 600;
+    padding: 8px 20px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.btn-custom-warning:hover {
+    background: #ffc107;
+    color: #000000;
+    transform: translateY(-2px);
+}
+
+/* Cards Elegantes */
+.card-custom {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.card-custom:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.card-header-custom {
+    background: linear-gradient(135deg, #000000 0%, #333333 100%);
+    color: #ffffff;
+    border: none;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.card-header-custom h3, 
+.card-header-custom h5 {
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Formulários Estilizados */
+.form-control-custom {
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 12px 15px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: #ffffff;
+}
+
+.form-control-custom:focus {
+    border-color: #000000;
+    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+.form-label-custom {
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 8px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Tabelas Elegantes */
+.table-custom {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.table-custom thead {
+    background: linear-gradient(135deg, #000000 0%, #333333 100%);
+    color: #ffffff;
+}
+
+.table-custom thead th {
+    border: none;
+    padding: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+
+.table-custom tbody tr {
+    transition: all 0.3s ease;
+}
+
+.table-custom tbody tr:hover {
+    background-color: #f8f9fa;
+    transform: scale(1.01);
+}
+
+.table-custom tbody td {
+    padding: 15px;
+    border-color: #e9ecef;
+    vertical-align: middle;
+}
+
+/* Badges Customizados */
+.badge-custom-info {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-custom-secondary {
+    background-color: #6c757d;
+    color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+/* Alertas Customizados */
+.alert-custom-success {
+    background-color: #ffffff;
+    border: 2px solid #28a745;
+    color: #155724;
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+}
+
+.alert-custom-danger {
+    background-color: #ffffff;
+    border: 2px solid #dc3545;
+    color: #721c24;
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+}
+
+.alert-custom-info {
+    background-color: #ffffff;
+    border: 2px solid #17a2b8;
+    color: #0c5460;
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+}
+
+/* Página de Login/Registro */
+.auth-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.auth-card {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 3px solid #000000;
+}
+
+.auth-header {
+    background: linear-gradient(135deg, #000000 0%, #333333 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 30px;
+}
+
+.auth-header h3 {
+    margin: 0;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Animações */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.6s ease;
+}
+
+/* Footer */
+.footer-custom {
+    background: linear-gradient(135deg, #000000 0%, #333333 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    border-top: 3px solid #ffffff;
+}
+
+/* Estado vazio */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #6c757d;
+}
+
+.empty-state i {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+.empty-state h4 {
+    margin-bottom: 15px;
+    color: #333333;
+}
+
+.empty-state p {
+    margin-bottom: 30px;
+}
+
+/* Preço destacado */
+.price-highlight {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #28a745;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Ícones */
+.icon-lg {
+    font-size: 1.5rem;
+    margin-right: 8px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar-custom .navbar-brand {
+        font-size: 1.2rem;
+    }
+    
+    .card-custom {
+        margin: 10px 0;
+    }
+    
+    .btn-custom-primary,
+    .btn-custom-secondary {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+    
+    .table-responsive {
+        font-size: 14px;
+    }
+}
+
+/* Efeitos especiais para botões de ação */
+.btn-group .btn {
+    margin: 0 2px;
+}
+
+/* Hover effects para cards */
+.card-hover-effect {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover-effect:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Loading states */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Gradiente sutil para backgrounds */
+.bg-gradient-light {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.bg-gradient-dark {
+    background: linear-gradient(135deg, #000000 0%, #333333 100%);
+}
