@@ -2,6 +2,9 @@
 
 Este é um sistema web desenvolvido em **Spring Boot** para gerenciar brinquedos esportivos voltados para crianças até 12 anos. O sistema implementa funcionalidades completas de CRUD (Create, Read, Update, Delete) com autenticação e autorização de usuários.
 
+## 🔗 Link Deploy:
+https://java-cp5-2.onrender.com
+
 ## 🚀 Tecnologias Utilizadas
 
 - **Java 21**
